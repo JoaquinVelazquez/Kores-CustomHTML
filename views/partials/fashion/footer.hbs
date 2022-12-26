@@ -1,0 +1,288 @@
+<div class="instagram-contenedor invisible">
+  <div class="texto">
+    <p>Síguenos en instagram</p>
+    <p><a href="https://www.instagram.com/koresmex/" target="_blank">instagram.com/koresmex</a></p>
+  </div>
+  <div class="fotos-contenedor">
+    <div class="fotos-uno">
+      <a href="https://www.instagram.com/koresmex/" target="_blank"><img class="foto-chica" src="https://iili.io/iDgN2f.jpg" alt=""></a>
+      <a href="https://www.instagram.com/koresmex/" target="_blank"><img class="foto-chica" src="https://iili.io/iDgjrG.jpg" alt=""></a>
+    </div>
+    <div class="fotos-dos">
+      <a href="https://www.instagram.com/koresmex/" target="_blank"><img class="foto-chica" src="https://iili.io/iDgXBn.jpg" alt=""></a>
+      <a href="https://www.instagram.com/koresmex/" target="_blank"><img class="foto-chica" src="https://iili.io/iDgVLX.jpg" alt=""></a>
+    </div>
+  </div>
+</div>
+
+{{!-- <div class="contenedor-instagram">
+  <div class="sector-top">
+    <div class="sector-top-imagenes">
+      <div class="imagen-uno">
+        <a href="https://www.instagram.com/p/CSuFD-PHnbc/">
+          <img src="https://iili.io/wlBu4V.jpg" alt="">
+        </a>
+      </div>
+      <div class="imagen-dos">
+        <a href="https://www.instagram.com/p/CXAIioHAZ4J/">
+          <img src="https://iili.io/wlBICx.jpg" alt="">
+        </a>
+      </div>
+    </div>
+    <div class="texto-instagram">
+      <p class="titulo-instagram">
+        #Kores
+      </p>
+      <p class="parrafo-instagram">
+        Eres nuestra fuente de inspiración. Únete a la comunidad creativa<br>Kores y comparte tus fotos en nuestra
+        página
+        de Instagram!
+      </p>
+      <a href="https://www.instagram.com/korescolombia/" class="enlace-instagram">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png" alt="">
+        <p>@Kores</p>
+      </a>
+    </div>
+  </div>
+  <div class="sector-bottom">
+    <div class="imagen-tres">
+      <a href="https://www.instagram.com/p/B_Asj3lJOY3/">
+        <img src="https://iili.io/wlBnTu.jpg" alt="">
+      </a>
+    </div>
+    <div class="imagen-cuatro">
+      <a href="https://www.instagram.com/p/CXKOZrRFIl_/">
+        <img src="https://iili.io/wlBxQj.jpg" alt="">
+      </a>
+    </div>
+    <div class="imagen-cinco">
+      <a href="https://www.instagram.com/p/CcTQHjorBQo/">
+        <img src="https://iili.io/wlBohb.jpg" alt="">
+      </a>
+    </div>
+    <div class="imagen-seis">
+      <a href="https://www.instagram.com/p/CSNfWM-Hjyj/">
+        <img src="https://iili.io/wlBTEQ.jpg" alt="">
+      </a>
+    </div>
+  </div>
+</div> --}}
+
+
+<footer>
+  <div class="fashion-nav-footer-contact">
+    <div class="fashion-nav-footer-contact__content">
+      <div class="nav-bounds nav-bounds--contact">
+        <div class="fashion-nav-footer__brand-col header--custom-text">
+          {{#if logo}}
+          <a class="nav-fashion-header__logo" href="/" id="logo-wrapper">
+            <span class="nav-header__title-hidden">{{name}}</span>
+            <img class="nav-header__image imagen-footer" src="{{logo}}" alt="{{name}}" itemprop="logo" />
+          </a>
+          {{else}}
+          <h3 class="nav-footer-contact-title header--custom-text">
+            <a href="/">{{name}}</a>
+          </h3>
+          {{/if}}
+          {{#if logoCaption}}
+          {{!-- <p class="fashion-nav-footer__logo-caption">{{{logoCaption}}}</p> --}}
+          {{/if}}
+          {{!-- <div class="fashion-nav-footer__social-media--responsive">
+            {{#each socialNetworks}}
+            <a href="{{url}}" rel="noreferrer noopener nofollow" target="_blank" class="header--custom-svg">
+              {{> (concat 'icons/social_networks/' (lookup . 'name'))}}
+            </a>
+            {{/each}}
+          </div> --}}
+        </div>
+
+        <div class="fashion-nav-footer__categories-col header--custom-border">
+          <p>
+            Productos
+          </p>
+
+          <div class="categorias-footer">
+            <span class="fashion-nav-footer__category">
+              <a href="/@pre">
+                Pre-Escolar
+              </a>
+            </span>
+            <span class="fashion-nav-footer__category">
+              <a href="/@escolar">
+                Escolar
+              </a>
+            </span>
+            <span class="fashion-nav-footer__category">
+              <a href="/@profesional">
+                Profesional
+              </a>
+            </span>
+            <span class="fashion-nav-footer__category">
+              <a href="/@manualidades">
+                Manualidades
+              </a>
+            </span>
+          </div>
+        </div>
+
+        <div class="fashion-nav-footer__categories-col header--custom-border">
+          <p>
+            Kores Tattoo
+          </p>
+
+          <div class="categorias-footer">
+
+          </div>
+        </div>
+
+        <div class="fashion-nav-footer__categories-col header--custom-border">
+          <p>
+            Sobre Nosotros
+          </p>
+
+          <div class="categorias-footer">
+            <span class="fashion-nav-footer__category">
+              <a href="/nosotros">
+                Quienes Somos
+              </a>
+            </span>
+          </div>
+        </div>
+
+        <div class="fashion-nav-footer__categories-col header--custom-border">
+          <p>
+            Contacto
+          </p>
+
+          <div class="contacto-footer">
+            {{#if showContact}}
+            {{#if showPhone}}
+            <span class="fashion-nav-footer__category">
+              <a class="" itemprop="telephone" href="tel:{{phone.raw}}" rel="nofollow">
+                Tel:{{phone.formatted}}
+              </a>
+            </span>
+            {{/if}}
+            {{#if showEmail}}
+            <span class="fashion-nav-footer__category">
+              <a class="" itemprop="email" href="mailto:{{email}}" rel="nofollow">
+                {{email}}
+              </a>
+            </span>
+            </li>
+            {{/if}}
+            {{#if address}}
+            {{#with address}}
+            <span class="fashion-nav-footer__category">
+              <a href="https://goo.gl/maps/FW9LvC2MboMYioe18" class="direccion" itemprop="streetAddress"
+                target="_blank">
+                {{address}}, {{city}}.<br>{{state}}
+              </a>
+            </span>
+            {{/with}}
+            {{/if}}
+            <meta itemprop="contactType" content="customer service" />
+            {{/if}}
+          </div>
+        </div>
+
+        <div class="fashion-nav-footer__categories-col header--custom-border siguenos">
+          <p>
+            Siguenos
+          </p>
+
+          <div class="redes-footer">
+            <a href="https://www.facebook.com/KoresMex" rel="noreferrer noopener nofollow" target="_blank">
+              <img class="facebook" src="https://cdn-icons-png.flaticon.com/512/1384/1384005.png" alt="">
+            </a>
+            <a href="https://www.instagram.com/koresmex/" rel="noreferrer noopener nofollow" target="_blank">
+              <img class="instagram" src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png" alt="">
+            </a>
+            <a href="https://www.youtube.com/user/KoresGmbH" rel="noreferrer noopener nofollow" target="_blank">
+              <img class="youtube" src="https://cdn-icons-png.flaticon.com/512/733/733646.png" alt="">
+            </a>
+          </div>
+        </div>
+
+        {{!-- <div class="fashion-nav-footer__pages header--custom-border">
+          <span class="fashion-nav-footer__page">
+            <a href="{{linkToHowBuy.href}}" class="header--custom-text">{{linkToHowBuy.label}}</a>
+          </span>
+        </div> --}}
+
+        {{!-- <div class="fashion-nav-footer__contact-col">
+          <div class="fashion-nav-footer__social-media">
+            {{#each socialNetworks}}
+            <a href="{{url}}" rel="noreferrer noopener nofollow" target="_blank" class="header--custom-svg">
+              {{> (concat 'icons/social_networks/' (lookup . 'name'))}}
+            </a>
+            {{/each}}
+          </div>
+
+          {{#if showContact}}
+          <ul class="fashion-nav-footer__contact header--custom-border">
+            {{#if showPhone}}
+            <li class="contact-phone-number">
+              <a class="header--custom-text" itemprop="telephone" href="tel:{{phone.raw}}" rel="nofollow">Tel:
+                {{phone.formatted}}</a>
+            </li>
+            {{/if}}
+            {{#if showEmail}}
+            <li class="contact-mail">
+              <a class="header--custom-text" itemprop="email" href="mailto:{{email}}" rel="nofollow">{{email}}</a>
+            </li>
+            {{/if}}
+            {{#if address}}
+            {{#with address}}
+            <li>
+              <a class="header--custom-text" itemprop="streetAddress">{{address}}</a>
+              <a class="header--custom-text" itemprop="addressLocality">{{city}}</a>
+              <a class="header--custom-text" itemprop="addressRegion">{{state}}</a>
+            </li>
+            {{/with}}
+            {{/if}}
+            <meta itemprop="contactType" content="customer service" />
+          </ul>
+          {{/if}}
+        </div> --}}
+      </div>
+    </div>
+  </div>
+  <div role="contentinfo" class="fashion-nav-footer nav-footer header--custom-text">
+    <div class="nav-bounds nav-bounds--copyright">
+      <div class="nav-footer-primaryinfo">
+        <small class="nav-footer-copyright">
+          <div class="nav-footer-disclaimer">
+            <div>
+              <div class="nav-footer-about">
+                <a href="{{{linkToMShopsLandingPage}}}" target="_blank"
+                  class="header--custom-text">{{i18n.powered_by}}</a>
+                {{#if linkToLegalNotices}}
+                <a href="{{linkToLegalNotices.href}}" class="header--custom-text">{{linkToLegalNotices.label}}</a>
+                {{/if}}
+                {{#if linkToLGPD}}
+                <a href="{{linkToLGPD.href}}" class="header--custom-text">{{linkToLGPD.label}}</a>
+                {{/if}}
+              </div>
+              {{#if showBusinessData}}
+              {{#with fiscalData}}
+              <div class="nav-footer-fiscal-data">
+                <p class="nav-footer-fiscal-data__name">{{legal_name}}</p>
+                <p class="nav-footer-fiscal-data__id">{{legal_doc}}</p>
+              </div>
+              {{/with}}
+              {{/if}}
+            </div>
+            {{#if showQrData}}
+            {{#with fiscalData}}
+            <a href={{qr_link}} target="_F960AFIPInfo">
+              <img class="nav-footer-afip-img" src={{qr_img}} alt="Data fiscal" />
+            </a>
+            {{/with}}
+            {{/if}}
+          </div>
+        </small>
+      </div>
+    </div>
+  </div>
+</footer>

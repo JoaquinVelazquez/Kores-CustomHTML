@@ -1,0 +1,460 @@
+<div class="header-wrapper header-wrapper--fixed {{headerAdditionalClasses}}" id="header-wrapper"
+  data-ms-theme="fashion">
+  {{#if flash.enabled}}
+  {{> components/flash}}
+  {{/if}}
+  {{> components/cookieDisclaimer}}
+  <header role="banner" class="nav-fashion-header" itemtype="http://schema.org/Store" itemid="#this" itemscope="">
+
+    <!-- Desktop menu sidebar -->
+    <div itemscope itemtype="http://schema.org/SiteNavigationElement"
+      class="nav-fashion-menu nav-fashion-sidebar-menu header--custom-background" id="nav-vertical-list">
+
+      {{!-- <div class="close-sidebar-button">
+        <input type="checkbox" id="nav-fashion__close-sidebar-button" name="nav-tools-header__menu-switch">
+        <label for="nav-fashion__close-sidebar-button" id="close-sidebar-button">
+          <span class="nav-header__close-sidebar-button nav-header__hamburger"></span>
+          <span class="nav-header__close-sidebar-button nav-header__hamburger"></span>
+        </label>
+      </div> --}}
+
+      <ul class="sidebar-menu-list invisible">
+        {{#if sale}}
+        <li class="nav-fashion-list--vertical__item nav-fashion__sale-link header--custom-border">
+          <a href="{{sale.url}}" class="header--custom-text">{{sale.text}}</a>
+        </li>
+        <li class="nav-fashion-list__item nav-fashion__hamburger-button" id="nav-fashion__hamburger-button"></li>
+        {{/if}}
+        {{#each menu}}
+        <li class="nav-fashion-list--vertical__item">
+          <a href="{{this.url}}" class="header--custom-text">{{this.name}}</a>
+          {{#if this.nodes}}
+          <div>
+            <input type="checkbox" data-js="categories-toggle" id="desktop-{{@index}}"
+              name="nav-tools-header__menu-switch">
+            <label for="desktop-{{@index}}" class="toggle-menu">
+              <span class="nav-header__toggle nav-header__hamburger"></span>
+              <span class="nav-header__toggle nav-header__hamburger"></span>
+            </label>
+          </div>
+          {{/if}}
+        </li>
+        <div class="nav-fashion-list--vertical__subitem-container" data-toggle="desktop-{{@index}}">
+          {{#each this.nodes}}
+          <li class="nav-fashion-list--vertical__subitem">
+            <a href="{{this.url}}" class="header--custom-text">{{this.name}}</a>
+            {{#if this.nodes}}
+            <div>
+              <input type="checkbox" data-js="categories-toggle" id="desktop-attr-{{@../index}}-{{@index}}"
+                name="nav-tools-header__menu-switch">
+              <label for="desktop-attr-{{@../index}}-{{@index}}" class="toggle-menu">
+                <span class="nav-header__toggle nav-header__hamburger"></span>
+                <span class="nav-header__toggle nav-header__hamburger"></span>
+              </label>
+            </div>
+            {{/if}}
+          </li>
+          <div class="nav-fashion-list--vertical__attr-container" data-toggle="desktop-attr-{{@../index}}-{{@index}}">
+            {{#each this.nodes}}
+            <li class="nav-fashion-list--vertical__attribute">
+              <a href="{{this.url}}" class="header--custom-text">{{this.name}}</a>
+            </li>
+            {{/each}}
+          </div>
+          {{/each}}
+        </div>
+        <hr class="nav-fashion-list--vertical__hr header--custom-border" />
+        {{/each}}
+
+        <li class="nav-fashion-list--vertical__item how-buy__button" data-js="how-buy__button">
+          <a href="{{linkToHowBuy.href}}" class="header--custom-text">{{linkToHowBuy.label}}</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="nav-fashion-header__bounds">
+      <!-- Logo -->
+      <div class="logo-header">
+        {{#if logo}}
+        <a class="nav-fashion-header__logo" href="/" id="logo-wrapper">
+          <span class="nav-header__title-hidden">{{shop.name}}</span>
+          <img class="nav-header__image" src="{{logo}}" alt="{{shop.name}}" itemprop="logo" />
+        </a>
+        {{else}}
+        <a class="nav-fashion-header__logo header--custom-text" href="/" id="logo-wrapper">{{name}}</a>
+        {{/if}}
+      </div>
+
+      <!-- Categories -->
+      <div class="nav-bounds nav-fashion-desktop-categories-popover categorias-header">
+        <ul>
+          <li>
+            <a href="/nuestros-productos" class="productos-menu">Productos</a>
+          </li>
+          <li>
+            <a href="/tattoo">Kores Tattoo</a>
+          </li>
+          <li>
+            <a href="/nosotros">Sobre Nosotros</a>
+          </li>
+          <li>
+            <a href="/p/como-comprar">Preguntas Frecuentes</a>
+          </li>
+          <li>
+            <a href="/p/contacto">Contacto</a>
+          </li>
+        </ul>
+      </div>
+
+
+      <!-- Icons -->
+      <nav class="nav-fashion-header__nav-icons" id="nav-fashion-header__nav-icons">
+        <div class="nav-icons-group">
+          <form class="nav-search-form" id="search-form" novalidate="">
+            <input type="text" class="nav-search-input header--custom-border header--custom-text"
+              placeholder="{{i18n.smallPlaceholder}}" id="search-input" required="" autocomplete=" off">
+            <button type="submit" class="search-button" id="nav-search-button">
+              {{> fashion/views/partials/search}}
+            </button>
+          </form>
+          {{#if contact}}
+          <a href="{{contact.href}}" class="contact-button" rel="nofollow">
+            {{> fashion/views/partials/contact}}
+          </a>
+          {{/if}}
+          {{#if cart}}
+          <a href="{{cart.href}}" title="Carrito" class="cart-button" id="nav-cart">
+            {{> fashion/views/partials/cart-badge}}
+            {{> fashion/views/partials/cart}}
+          </a>
+          {{/if}}
+        </div>
+      </nav>
+
+
+      <!-- Logo -->
+      <div class="logo-header-mobile">
+        {{#if logo}}
+        <a class="nav-fashion-header__logo" href="/" id="logo-wrapper">
+          <span class="nav-header__title-hidden">{{shop.name}}</span>
+          <img class="nav-header__image" src="{{logo}}" alt="{{shop.name}}" itemprop="logo" />
+        </a>
+        {{else}}
+        <a class="nav-fashion-header__logo header--custom-text" href="/" id="logo-wrapper">{{name}}</a>
+        {{/if}}
+      </div>
+
+      <!-- Desktop menu navbar categories -->
+      <ul itemscope itemtype="http://schema.org/SiteNavigationElement" class="nav-fashion-list" id="nav-list">
+        <li class="nav-fashion-list__item nav-fashion__hamburger-button" id="nav-fashion__hamburger-button">
+          <input type="checkbox" id="mobile-categories-menu-switch" name="nav-tools-header__menu-switch">
+          <label for="mobile-categories-menu-switch" id="hamburguer-menu">
+            <span class="nav-header__hamburger"></span>
+            <span class="nav-header__hamburger"></span>
+            <span class="nav-header__hamburger"></span>
+          </label>
+        </li>
+        {{#each menu}}
+        <li class="nav-fashion-list__item" data-js="{{this.name}}-{{@index}}" has-childs={{this.nodes}}>
+          <a href="{{this.url}}">
+            <span class="header--custom-text">{{this.name}}</span>
+          </a>
+        </li>
+        {{/each}}
+
+        {{#if sale.text}}
+        <li class="nav-fashion-list__item nav-fashion__sale-link" id="nav-fashion__sale-link">
+          <a href="{{sale.url}}" class="header--custom-text">{{sale.text}}</a>
+        </li>
+        {{/if}}
+
+        <li class="nav-fashion-list__item nav-fashion__see-more" id="nav-fashion__see-more" has-childs="true">
+          <a class="header--custom-text">
+            <span>{{i18n.moreCategories}}</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Mobile responsive menu -->
+      <div itemscope itemtype="http://schema.org/SiteNavigationElement"
+        class="nav-fashion-menu nav-fashion-responsive-menu header--custom-background-mobile" id="responsive-menu">
+        <form class="nav-fashion-search-form header--custom-border" id="search-form-responsive" novalidate="">
+          <button type="submit" class="search-button">
+            {{> fashion/views/partials/search}}
+          </button>
+          <input type="text" placeholder="{{i18n.smallPlaceholder}}" class="header--custom-text"
+            id="search-input-responsive" required="" autocomplete=" off">
+        </form>
+
+        <ul class="responsive-menu-list">
+          {{#if sale.text}}
+          <li class="nav-fashion-list--vertical__item nav-fashion__sale-link header--custom-border">
+            <a href="{{sale.url}}" class="header--custom-text">{{sale.text}}</a>
+          </li>
+          <li class="nav-fashion-list__item nav-fashion__hamburger-button" id="nav-fashion__hamburger-button"></li>
+          {{/if}}
+
+          <li class="nav-fashion-list--vertical__item">
+            <a href="{{this.url}}" class="header--custom-text">Productos</a> <img class="flecha-productos"
+              src="https://cdn-icons-png.flaticon.com/512/5436/5436598.png" alt="">
+          </li>
+
+          <ul class="subcategoria-mobile invisible">
+            <li>
+              Tipos de Productos
+              <ul class="subcategoria-mobile-nivel">
+                <li><a href="/pegamento">Pegamento</a></li>
+                <li><a href="/lapiz-color">Colores</a></li>
+                <li><a href="/goma">Gomas</a></li>
+                <li><a href="/papel-hojas">Papeles Especiales</a></li>
+                <li><a href="/correctores">Correctores</a></li>
+                <li><a href="/@escritura">Escritura</a></li>
+                <li><a href="/sacapuntas">Sacapuntas</a></li>
+                <li><a href="/arte-papeleria-merceria-manualidades-masas-plastilina">Foamy Moldeable</a></li>
+                <li><a href="/listado/arte-papeleria-merceria/papeleria/escolar/escritura/marcadores-marcatextos/#applied_filter_id%3Dcategory%26applied_filter_name%3DCategorías%26applied_filter_order%3D3%26applied_value_id%3DMLM167976%26applied_value_name%3DMarcadores+y+Marcatextos%26applied_value_order%3D5%26applied_value_results%3D31%26is_custom%3Dfalse">Marcadores y Resaltadores</a></li>
+                <li><a href="/@office">Accesorios para oficina</a></li>
+                <li><a href="/pintura">Pinturas y Acuarelas</a></li>
+              </ul>
+            </li>
+
+            <li>
+              Categorias
+              <ul class="subcategoria-mobile-nivel">
+                <li><a href="/@pre">Pre-Escolar</a></li>
+                <li><a href="/@escolar">Escolar</a></li>
+                <li><a href="/@profesional">Profesional</a></li>
+                <li><a href="/@manualidades">Manualidades</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <hr class="nav-fashion-list--vertical__hr header--custom-border" />
+
+          <li class="nav-fashion-list--vertical__item">
+            <a href="/tattoo" class="header--custom-text">Kores Tattoo</a>
+          </li>
+
+          <hr class="nav-fashion-list--vertical__hr header--custom-border" />
+
+          <li class="nav-fashion-list--vertical__item">
+            <a href="/nosotros" class="header--custom-text">Sobre Nosotros</a>
+          </li>
+
+          <hr class="nav-fashion-list--vertical__hr header--custom-border" />
+
+          <li class="nav-fashion-list--vertical__item">
+            <a href="/p/como-comprar" class="header--custom-text">Preguntas Frecuentes</a>
+          </li>
+
+          <hr class="nav-fashion-list--vertical__hr header--custom-border" />
+
+          <li class="nav-fashion-list--vertical__item">
+            <a href="/p/contacto" class="header--custom-text">Contacto</a>
+          </li>
+
+          <hr class="nav-fashion-list--vertical__hr header--custom-border" />
+
+          <li class="nav-fashion-list--vertical__item how-buy__button how-buy-button__mobile" id="how-buy__button"
+            data-js="how-buy__button">
+            <a href="{{linkToHowBuy.href}}" class="header--custom-text">{{linkToHowBuy.label}}</a>
+          </li>
+        </ul>
+      </div>
+
+      {{!--
+      <!-- Logo -->
+      <div class="nav-fashion-header__title">
+        {{#if logo}}
+        <a class="nav-fashion-header__logo" href="/" id="logo-wrapper">
+          <span class="nav-header__title-hidden">{{shop.name}}</span>
+          <img class="nav-header__image" src="{{logo}}" alt="{{shop.name}}" itemprop="logo" />
+        </a>
+        {{else}}
+        <a class="nav-fashion-header__logo header--custom-text" href="/" id="logo-wrapper">{{name}}</a>
+        {{/if}}
+      </div> --}}
+
+      <!-- Icons -->
+      {{!-- <nav class="nav-fashion-header__nav-icons" id="nav-fashion-header__nav-icons">
+        <div class="nav-icons-group">
+          <form class="nav-search-form" id="search-form" novalidate="">
+            <input type="text" class="nav-search-input header--custom-border header--custom-text"
+              placeholder="{{i18n.smallPlaceholder}}" id="search-input" required="" autocomplete=" off">
+            <button type="submit" class="search-button" id="nav-search-button">
+              {{> fashion/views/partials/search}}
+            </button>
+          </form>
+          {{#if contact}}
+          <a href="{{contact.href}}" class="contact-button" rel="nofollow">
+            {{> fashion/views/partials/contact}}
+          </a>
+          {{/if}}
+          {{#if cart}}
+          <a href="{{cart.href}}" title="Carrito" class="cart-button" id="nav-cart">
+            {{> fashion/views/partials/cart-badge}}
+            {{> fashion/views/partials/cart}}
+          </a>
+          {{/if}}
+        </div>
+      </nav> --}}
+    </div>
+
+    <!-- Desktop menu popover -->
+    <div itemscope itemtype="http://schema.org/SiteNavigationElement" id="popover-menu"
+      class="header--custom-background">
+      <!-- Categories -->
+      <div class="nav-bounds nav-fashion-desktop-categories-popover">
+        {{#each menu}}
+        <div class="nav-fashion-list--horizontal__item" data-toggle="{{this.name}}-{{@index}}">
+          <li class="nav-fashion-list--horizontal__category header--custom-text">
+            <a href="{{this.url}}">{{this.name}}</a>
+            <hr class="nav-fashion-list--vertical__hr header--custom-border" />
+          </li>
+          {{#each this.nodes}}
+          <div class="nav-fashion-list--horizontal__subitem">
+            <li class="header--custom-text">
+              <a href="{{this.url}}">{{this.name}}</a>
+            </li>
+            <div class="nav-fashion-list--horizontal__attr-container">
+              {{#each this.nodes}}
+              <li class="nav-fashion-list--horizontal__attribute header--custom-text">
+                <a href="{{this.url}}">{{this.name}}</a>
+              </li>
+              {{/each}}
+            </div>
+          </div>
+          {{/each}}
+        </div>
+        {{/each}}
+      </div>
+      <!-- See more -->
+      <div class="nav-bounds nav-fashion-desktop-see-more-popover" id="nav-popover-list">
+        {{#each menu}}
+        <div class="nav-fashion-list--horizontal__item" data-toggle="see-more">
+          <li class="nav-fashion-list--horizontal__category header--custom-text">
+            <a href="{{this.url}}">{{this.name}}</a>
+            <hr class="nav-fashion-list--vertical__hr header--custom-border" />
+          </li>
+          <div>
+            {{#each this.nodes}}
+            <li class="nav-fashion-list--horizontal__subitem header--custom-text">
+              <a href="{{this.url}}">{{this.name}}</a>
+            </li>
+            <div class="nav-fashion-list--horizontal__attr-container">
+              {{#each this.nodes}}
+              <li class="nav-fashion-list--horizontal__attribute header--custom-text">
+                <a href="{{this.url}}">{{this.name}}</a>
+              </li>
+              {{/each}}
+            </div>
+            {{/each}}
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </header>
+</div>
+<div class="submenu-categorias invisible">
+  <div class="seleccion-submenu-categorias">
+    <p class="tipos-de-productos">Tipos de producto</p>
+    <p class="categorias-select">Categorias</p>
+    <a href="https://pdfhost.io/v/BaH40xJUz_CATALOGO_2022"
+      class="descargar-catalogo" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/724/724933.png" alt=""> Descargar Catálogo
+    </a>
+  </div>
+  <div class="tipos-de-productos">
+
+  </div>
+  <div class="seleccion-categorias invisible">
+    <div class="tarjeta-categoria">
+      <a href="/@pre">
+      <img
+        src="https://iili.io/ZKt1xR.png"
+        alt="">
+      <p>Pre-Escolar</p>
+      </a>
+    </div>
+    <div class="tarjeta-categoria">
+      <a href="/@escolar">
+      <img
+        src="https://iili.io/ZKtWlt.png"
+        alt="">
+      <p>Escolar</p>
+      </a>
+    </div>
+    <div class="tarjeta-categoria">
+      <a href="/@profesional">
+      <img
+        src="https://iili.io/ZKtVfI.png"
+        alt="">
+      <p>Profesional</p>
+      </a>
+    </div>
+    <div class="tarjeta-categoria">
+      <a href="/@manualidades">
+      <img
+        src="https://iili.io/ZKtGiN.png"
+        alt="">
+      <p>Manualidades</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="seleccion-productos">
+    <div class="grupo-productos">
+      <a class="link-productos" href="/pegamento">Pegamentos</a>
+      <a class="link-productos" href="/lapiz-color">Colores</a>
+      <a class="link-productos" href="/goma">Gomas</a>
+      <a class="link-productos" href="/papel-hojas">Papeles Especiales</a>
+    </div>
+    <div class="grupo-productos">
+      <a class="link-productos" href="/correctores">Correctores</a>
+      <a class="link-productos" href="/@escritura">Escritura</a>
+      <a class="link-productos" href="/sacapuntas">Sacapuntas</a>
+      <a class="link-productos" href="/arte-papeleria-merceria-manualidades-masas-plastilina">Foamy Moldeable</a>
+    </div>
+    <div class="grupo-productos">
+      <a class="link-productos" href="/listado/arte-papeleria-merceria/papeleria/escolar/escritura/marcadores-marcatextos/#applied_filter_id%3Dcategory%26applied_filter_name%3DCategorías%26applied_filter_order%3D3%26applied_value_id%3DMLM167976%26applied_value_name%3DMarcadores+y+Marcatextos%26applied_value_order%3D5%26applied_value_results%3D31%26is_custom%3Dfalse">Marcadores y<br>resaltadores</a>
+      <a class="link-productos" href="/@office">Accesorios para<br>Oficina</a>
+      <a class="link-productos" href="/pintura">Pinturas y<br>Acuarelas</a>
+    </div>
+
+    <div class="imagen-productos">
+      <img class="imagen-producto "
+        src="https://www.kores.com/co/wp-content/uploads/sites/23/fly-images/2312/01_Gluing_1260x1260px_product_types-300x300-c.png"
+        alt="">
+      <img class="imagen-producto invisible"
+        src="https://www.kores.com/co/wp-content/uploads/sites/23/fly-images/2308/06_Colouring_1260x1260px_product_types-300x300-c.png"
+        alt="">
+      <img class="imagen-producto invisible"
+        src="https://www.kores.com/co/wp-content/uploads/sites/23/fly-images/2311/11_Eraser_1260x1260px_product_types-300x300-c.png"
+        alt="">
+      <img class="imagen-producto invisible"
+        src="https://iili.io/QqHsEX.jpg"
+        alt="">
+      <img class="imagen-producto invisible"
+        src="https://iili.io/QqHtYG.jpg"
+        alt="">
+      <img class="imagen-producto invisible"
+        src="https://www.kores.com/co/wp-content/uploads/sites/23/fly-images/2320/04_writing_1260x1260px_product_types-300x300-c.png"
+        alt="">
+      <img class="imagen-producto invisible"
+        src="https://www.kores.com/co/wp-content/uploads/sites/23/fly-images/2690/Sharpeners_1260x1260px_product_types_smaller-300x300-c.png"
+        alt="">
+      <img class="imagen-producto invisible"
+        src="https://iili.io/QqHL4n.jpg"
+        alt="">
+      <img class="imagen-producto invisible"
+        src="https://iili.io/QqH6QI.md.jpg"
+        alt="">
+      <img class="imagen-producto invisible"
+        src="https://iili.io/QqHiBt.jpg"
+        alt="">
+      <img class="imagen-producto invisible"
+        src="https://iili.io/ZKZLPI.jpg"
+        alt="">
+    </div>
+  </div>
+</div>
