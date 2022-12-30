@@ -26,7 +26,7 @@ if (document.querySelector(".ui-search-toolbar")) {
   }
 
   /* ESCRITURA */
-  if (URLactual == "/@escritura") {
+  if (URLactual == "/k01") {
     const banner = document.createElement("img");
     banner.src = "https://iili.io/yKJAiv.jpg";
     banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
@@ -117,7 +117,7 @@ if (document.querySelector(".ui-search-toolbar")) {
   }
 
   /* ACCESORIOS OFICINA */
-  if (URLactual == "/@office") {
+  if (URLactual == "/k02") {
     const banner = document.createElement("img");
     banner.src = "https://iili.io/HdVABaf.jpg";
     banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
@@ -128,7 +128,7 @@ if (document.querySelector(".ui-search-toolbar")) {
   }
 
   /* PREESCOLAR */
-  if (URLactual == "/@pre") {
+  if (URLactual == "/k03") {
     const banner = document.createElement("img");
     banner.src = "https://iili.io/HoGszEF.jpg";
     banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
@@ -139,7 +139,7 @@ if (document.querySelector(".ui-search-toolbar")) {
   }
 
   /* ESCOLAR */
-  if (URLactual == "/@escolar") {
+  if (URLactual == "/k04") {
     const banner = document.createElement("img");
     banner.src = "https://iili.io/HoGsxB1.jpg";
     banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
@@ -150,7 +150,7 @@ if (document.querySelector(".ui-search-toolbar")) {
   }
 
   /* PROFESIONAL */
-  if (URLactual == "/@profesional") {
+  if (URLactual == "/k05") {
     const banner = document.createElement("img");
     banner.src = "https://iili.io/HoGsAYJ.jpg";
     banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
@@ -161,7 +161,7 @@ if (document.querySelector(".ui-search-toolbar")) {
   }
 
   /* MANUALIDADES */
-  if (URLactual == "/@manualidades") {
+  if (URLactual == "/k06") {
     const banner = document.createElement("img");
     banner.src = "https://iili.io/HoGsIrg.jpg";
     banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
@@ -205,7 +205,7 @@ if (document.querySelector(".ui-search-toolbar")) {
   }
 
   /* ESCRITURA */
-  if (URLactual == "/@escritura") {
+  if (URLactual == "/k01") {
     const banner = document.createElement("img");
     banner.src = "https://iili.io/yKJAiv.jpg";
     if (parent !== null) {
@@ -288,7 +288,7 @@ if (document.querySelector(".ui-search-toolbar")) {
   }
 
   /* ACCESORIOS OFICINA */
-  if (URLactual == "/@office") {
+  if (URLactual == "/k02") {
     const banner = document.createElement("img");
     banner.src = "https://iili.io/HdVABaf.jpg";
     if (parent !== null) {
@@ -298,7 +298,7 @@ if (document.querySelector(".ui-search-toolbar")) {
   }
 
   /* PREESCOLAR */
-  if (URLactual == "/@pre") {
+  if (URLactual == "/k03") {
     const banner = document.createElement("img");
     banner.src = "https://iili.io/HoGszEF.jpg";
     if (parent !== null) {
@@ -308,7 +308,7 @@ if (document.querySelector(".ui-search-toolbar")) {
   }
 
   /* ESCOLAR */
-  if (URLactual == "/@escolar") {
+  if (URLactual == "/k04") {
     const banner = document.createElement("img");
     banner.src = "https://iili.io/HoGsxB1.jpg";
     if (parent !== null) {
@@ -318,7 +318,7 @@ if (document.querySelector(".ui-search-toolbar")) {
   }
 
   /* PROFESIONAL */
-  if (URLactual == "/@profesional") {
+  if (URLactual == "/k05") {
     const banner = document.createElement("img");
     banner.src = "https://iili.io/HoGsAYJ.jpg";
     if (parent !== null) {
@@ -328,7 +328,7 @@ if (document.querySelector(".ui-search-toolbar")) {
   }
 
   /* MANUALIDADES */
-  if (URLactual == "/@manualidades") {
+  if (URLactual == "/k06") {
     const banner = document.createElement("img");
     banner.src = "https://iili.io/HoGsIrg.jpg";
     if (parent !== null) {
