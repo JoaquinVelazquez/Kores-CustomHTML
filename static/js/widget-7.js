@@ -28,3 +28,6 @@ tiposProductos.addEventListener('click', function(){
     categoriasSubmenu.classList.add("invisible");
     tiposProductosSubmenu.classList.remove("invisible");
 })
+
+console.log(7)
+

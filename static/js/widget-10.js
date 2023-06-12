@@ -1,349 +1,338 @@
-const URLactual = window.location.pathname;
+const URLactual2 = window.location.pathname;
 
-if (document.querySelector(".ui-search-toolbar")) {
-  const parent = document.querySelector(".ui-search-toolbar");
-
-  /* COLORES */
-  if (URLactual == "/lapiz-color") {
-    const banner = document.createElement("img");
-    banner.src = "https://iili.io/yKJ3Vj.jpg";
-    banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
-    if (parent !== null) {
-      parent.insertBefore(banner, parent.firstChild);
+setTimeout(() => {
+  if (document.querySelector(".ui-search-toolbar")) {
+    const parent = document.querySelector(".ui-search-toolbar");
+  
+    /* COLORES */
+    if (URLactual2 == "/lapiz-color") {
+      const banner = document.createElement("img");
+      banner.src = "https://iili.io/yKJ3Vj.jpg";
+      banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
+      if (parent !== null) {
+        parent.insertBefore(banner, parent.firstChild);
+      }
+      throw new Error("Error controlado");
     }
-    throw new Error("Error controlado");
-  }
-
-  /* CORRECTORES */
-  if (URLactual == "/correctores") {
-    const banner = document.createElement("img");
-    banner.src = "https://iili.io/yKJnHP.jpg";
-    banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
-    if (parent !== null) {
-      parent.insertBefore(banner, parent.firstChild);
+  
+    /* CORRECTORES */
+    if (URLactual2 == "/correctores") {
+      const banner = document.createElement("img");
+      banner.src = "https://iili.io/yKJnHP.jpg";
+      banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
+      if (parent !== null) {
+        parent.insertBefore(banner, parent.firstChild);
+      }
+      throw new Error("Error controlado");
     }
-    throw new Error("Error controlado");
-  }
-
-  /* ESCRITURA */
-  if (URLactual == "/k01") {
-    const banner = document.createElement("img");
-    banner.src = "https://iili.io/yKJAiv.jpg";
-    banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
-    if (parent !== null) {
-      parent.insertBefore(banner, parent.firstChild);
+  
+    /* ESCRITURA */
+    if (URLactual2 == "/k01") {
+      const banner = document.createElement("img");
+      banner.src = "https://iili.io/yKJAiv.jpg";
+      banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
+      if (parent !== null) {
+        parent.insertBefore(banner, parent.firstChild);
+      }
+      throw new Error("Error controlado");
     }
-    throw new Error("Error controlado");
-  }
-
-  /* GOMAS */
-  if (URLactual == "/goma") {
-    const banner = document.createElement("img");
-    banner.src = "https://iili.io/yKJ0OX.jpg";
-    banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
-    if (parent !== null) {
-      parent.insertBefore(banner, parent.firstChild);
+  
+    /* GOMAS */
+    if (URLactual2 == "/goma") {
+      const banner = document.createElement("img");
+      banner.src = "https://iili.io/yKJ0OX.jpg";
+      banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
+      if (parent !== null) {
+        parent.insertBefore(banner, parent.firstChild);
+      }
+      throw new Error("Error controlado");
     }
-    throw new Error("Error controlado");
-  }
-
-  /* PEGAMENTOS */
-  if (URLactual == "/pegamento") {
-    const banner = document.createElement("img");
-    banner.src = "https://iili.io/yKJVsf.jpg";
-    banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
-    if (parent !== null) {
-      parent.insertBefore(banner, parent.firstChild);
+  
+    /* PEGAMENTOS */
+    if (URLactual2 == "/pegamento") {
+      const banner = document.createElement("img");
+      banner.src = "https://iili.io/yKJVsf.jpg";
+      banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
+      console.log(banner)
+      if (parent !== null) {
+        parent.insertBefore(banner, parent.firstChild);
+        console.log(parent.firstChild)
+      }
+      throw new Error("Error controlado");
     }
-    throw new Error("Error controlado");
-  }
-
-  /* SACAPUNTAS */
-  if (URLactual == "/sacapuntas") {
-    const banner = document.createElement("img");
-    banner.src = "https://iili.io/yKJO57.jpg";
-    banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
-    if (parent !== null) {
-      parent.insertBefore(banner, parent.firstChild);
+  
+    /* SACAPUNTAS */
+    if (URLactual2 == "/sacapuntas") {
+      const banner = document.createElement("img");
+      banner.src = "https://iili.io/yKJO57.jpg";
+      banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
+      if (parent !== null) {
+        parent.insertBefore(banner, parent.firstChild);
+      }
+      throw new Error("Error controlado");
     }
-    throw new Error("Error controlado");
-  }
-
-  /* FOAMY MOLDEABLE */
-  if (URLactual == "/arte-papeleria-merceria-manualidades-masas-plastilina") {
-    const banner = document.createElement("img");
-    banner.src = "https://iili.io/HdVFpku.jpg";
-    banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
-    if (parent !== null) {
-      parent.insertBefore(banner, parent.firstChild);
+  
+    /* FOAMY MOLDEABLE */
+    if (URLactual2 == "/arte-papeleria-merceria-manualidades-masas-plastilina") {
+      const banner = document.createElement("img");
+      banner.src = "https://iili.io/HdVFpku.jpg";
+      banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
+      if (parent !== null) {
+        parent.insertBefore(banner, parent.firstChild);
+      }
+      throw new Error("Error controlado");
     }
-    throw new Error("Error controlado");
-  }
-
-  /* MARCADORES Y RESALTADORES */
-  if (
-    URLactual ==
-    "/listado/arte-papeleria-merceria/papeleria/escolar/escritura/marcadores-marcatextos/"
-  ) {
-    const banner = document.createElement("img");
-    banner.src = "https://iili.io/HdVqVd7.jpg";
-    banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
-    if (parent !== null) {
-      parent.insertBefore(banner, parent.firstChild);
+  
+    /* MARCADORES Y RESALTADORES */
+    if (
+      URLactual2 ==
+      "/listado/arte-papeleria-merceria/papeleria/escolar/escritura/marcadores-marcatextos/"
+    ) {
+      const banner = document.createElement("img");
+      banner.src = "https://iili.io/HdVqVd7.jpg";
+      banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
+      if (parent !== null) {
+        parent.insertBefore(banner, parent.firstChild);
+      }
+      throw new Error("Error controlado");
     }
-    throw new Error("Error controlado");
-  }
-
-  /* PINTURAS Y ACUARELAS */
-  if (URLactual == "/pintura") {
-    const banner = document.createElement("img");
-    banner.src = "https://iili.io/HdVnazg.jpg";
-    banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
-    if (parent !== null) {
-      parent.insertBefore(banner, parent.firstChild);
+  
+    /* PINTURAS Y ACUARELAS */
+    if (URLactual2 == "/pintura") {
+      const banner = document.createElement("img");
+      banner.src = "https://iili.io/HdVnazg.jpg";
+      banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
+      if (parent !== null) {
+        parent.insertBefore(banner, parent.firstChild);
+      }
+      throw new Error("Error controlado");
     }
-    throw new Error("Error controlado");
-  }
-
-  /* PAPELES ESPECIALES */
-  if (URLactual == "/papel-hojas") {
-    const banner = document.createElement("img");
-    banner.src = "https://iili.io/HdVTqVn.jpg";
-    banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
-    if (parent !== null) {
-      parent.insertBefore(banner, parent.firstChild);
+  
+    /* PAPELES ESPECIALES */
+    if (URLactual2 == "/papel-hojas") {
+      const banner = document.createElement("img");
+      banner.src = "https://iili.io/HdVTqVn.jpg";
+      banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
+      if (parent !== null) {
+        parent.insertBefore(banner, parent.firstChild);
+      }
+      throw new Error("Error controlado");
     }
-    throw new Error("Error controlado");
-  }
-
-  /* ACCESORIOS OFICINA */
-  if (URLactual == "/k02") {
-    const banner = document.createElement("img");
-    banner.src = "https://iili.io/HdVABaf.jpg";
-    banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
-    if (parent !== null) {
-      parent.insertBefore(banner, parent.firstChild);
+  
+    /* ACCESORIOS OFICINA */
+    if (URLactual2 == "/k02") {
+      const banner = document.createElement("img");
+      banner.src = "https://iili.io/HdVABaf.jpg";
+      banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
+      if (parent !== null) {
+        parent.insertBefore(banner, parent.firstChild);
+      }
+      throw new Error("Error controlado");
     }
-    throw new Error("Error controlado");
-  }
-
-  /* PREESCOLAR */
-  if (URLactual == "/k03") {
-    const banner = document.createElement("img");
-    banner.src = "https://iili.io/HoGszEF.jpg";
-    banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
-    if (parent !== null) {
-      parent.insertBefore(banner, parent.firstChild);
+  
+    /* PREESCOLAR */
+    if (URLactual2 == "/k03") {
+      const banner = document.createElement("img");
+      banner.src = "https://iili.io/HoGszEF.jpg";
+      banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
+      if (parent !== null) {
+        parent.insertBefore(banner, parent.firstChild);
+      }
+      throw new Error("Error controlado");
     }
-    throw new Error("Error controlado");
-  }
-
-  /* ESCOLAR */
-  if (URLactual == "/k04") {
-    const banner = document.createElement("img");
-    banner.src = "https://iili.io/HoGsxB1.jpg";
-    banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
-    if (parent !== null) {
-      parent.insertBefore(banner, parent.firstChild);
+  
+    /* ESCOLAR */
+    if (URLactual2 == "/k04") {
+      const banner = document.createElement("img");
+      banner.src = "https://iili.io/HoGsxB1.jpg";
+      banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
+      if (parent !== null) {
+        parent.firstChild.appendChild(banner);
+      }
     }
-    throw new Error("Error controlado");
-  }
-
-  /* PROFESIONAL */
-  if (URLactual == "/k05") {
-    const banner = document.createElement("img");
-    banner.src = "https://iili.io/HoGsAYJ.jpg";
-    banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
-    if (parent !== null) {
-      parent.insertBefore(banner, parent.firstChild);
+  
+    /* PROFESIONAL */
+    if (URLactual2 == "/k05") {
+      const banner = document.createElement("img");
+      banner.src = "https://iili.io/HoGsAYJ.jpg";
+      banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
+      if (parent !== null) {
+        parent.insertBefore(banner, parent.firstChild);
+      }
+      throw new Error("Error controlado");
     }
-    throw new Error("Error controlado");
-  }
-
-  /* MANUALIDADES */
-  if (URLactual == "/k06") {
-    const banner = document.createElement("img");
-    banner.src = "https://iili.io/HoGsIrg.jpg";
-    banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
-    if (parent !== null) {
-      parent.insertBefore(banner, parent.firstChild);
+  
+    /* MANUALIDADES */
+    if (URLactual2 == "/k06") {
+      const banner = document.createElement("img");
+      banner.src = "https://iili.io/HoGsIrg.jpg";
+      banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
+      if (parent !== null) {
+        parent.insertBefore(banner, parent.firstChild);
+      }
+      throw new Error("Error controlado");
     }
-    throw new Error("Error controlado");
-  }
-
-  /* TATTOO */
-  if (URLactual == "/tattoo") {
-    const banner = document.createElement("img");
-    banner.src = "https://iili.io/HoGsu2a.jpg";
-    banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
-    if (parent !== null) {
-      parent.insertBefore(banner, parent.firstChild);
+  
+    /* TATTOO */
+    if (URLactual2 == "/tattoo") {
+      const banner = document.createElement("img");
+      banner.src = "https://iili.io/HoGsu2a.jpg";
+      banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
+      if (parent !== null) {
+        parent.insertBefore(banner, parent.firstChild);
+      }
+      throw new Error("Error controlado");
     }
-    throw new Error("Error controlado");
-  }
-} else {
-  const parent = document.querySelector(".ui-search-results");
-
-  /* COLORES */
-  if (URLactual == "/lapiz-color") {
-    const banner = document.createElement("img");
-    banner.src = "https://iili.io/yKJ3Vj.jpg";
-    if (parent !== null) {
-      parent.insertBefore(banner, parent.firstChild);
+  } else {
+    const parent = document.querySelector(".ui-search-results");
+  
+    /* COLORES */
+    if (URLactual2 == "/lapiz-color") {
+      const banner = document.createElement("img");
+      banner.src = "https://iili.io/yKJ3Vj.jpg";
+      if (parent !== null) {
+        parent.firstChild.appendChild(banner);
+      }
     }
-    throw new Error("Error controlado");
-  }
-
-  /* CORRECTORES */
-  if (URLactual == "/correctores") {
-    const banner = document.createElement("img");
-    banner.src = "https://iili.io/yKJnHP.jpg";
-    if (parent !== null) {
-      parent.insertBefore(banner, parent.firstChild);
+  
+    /* CORRECTORES */
+    if (URLactual2 == "/correctores") {
+      const banner = document.createElement("img");
+      banner.src = "https://iili.io/yKJnHP.jpg";
+      if (parent !== null) {
+        parent.firstChild.appendChild(banner);
+      }
     }
-    throw new Error("Error controlado");
-  }
-
-  /* ESCRITURA */
-  if (URLactual == "/k01") {
-    const banner = document.createElement("img");
-    banner.src = "https://iili.io/yKJAiv.jpg";
-    if (parent !== null) {
-      parent.insertBefore(banner, parent.firstChild);
+  
+    /* ESCRITURA */
+    if (URLactual2 == "/k01") {
+      const banner = document.createElement("img");
+      banner.src = "https://iili.io/yKJAiv.jpg";
+      if (parent !== null) {
+        parent.firstChild.appendChild(banner);
+      }
     }
-    throw new Error("Error controlado");
-  }
-
-  /* GOMAS */
-  if (URLactual == "/goma") {
-    const banner = document.createElement("img");
-    banner.src = "https://iili.io/yKJ0OX.jpg";
-    if (parent !== null) {
-      parent.insertBefore(banner, parent.firstChild);
+  
+    /* GOMAS */
+    if (URLactual2 == "/goma") {
+      const banner = document.createElement("img");
+      banner.src = "https://iili.io/yKJ0OX.jpg";
+      if (parent !== null) {
+        parent.firstChild.appendChild(banner);
+      }
     }
-    throw new Error("Error controlado");
-  }
-
-  /* PEGAMENTOS */
-  if (URLactual == "/pegamento") {
-    const banner = document.createElement("img");
-    banner.src = "https://iili.io/yKJVsf.jpg";
-    if (parent !== null) {
-      parent.insertBefore(banner, parent.firstChild);
+  
+    /* PEGAMENTOS */
+    if (URLactual2 == "/pegamento") {
+      const banner = document.createElement("img");
+      banner.src = "https://iili.io/yKJVsf.jpg";
+      if (parent !== null) {
+        parent.firstChild.appendChild(banner);
+      }
     }
-    throw new Error("Error controlado");
-  }
-
-  /* SACAPUNTAS */
-  if (URLactual == "/sacapuntas") {
-    const banner = document.createElement("img");
-    banner.src = "https://iili.io/yKJO57.jpg";
-    if (parent !== null) {
-      parent.insertBefore(banner, parent.firstChild);
+  
+    /* SACAPUNTAS */
+    if (URLactual2 == "/sacapuntas") {
+      const banner = document.createElement("img");
+      banner.src = "https://iili.io/yKJO57.jpg";
+      if (parent !== null) {
+        parent.firstChild.appendChild(banner);
+      }
     }
-    throw new Error("Error controlado");
-  }
-
-  /* FOAMY MOLDEABLE */
-  if (URLactual == "/arte-papeleria-merceria-manualidades-masas-plastilina") {
-    const banner = document.createElement("img");
-    banner.src = "https://iili.io/HdVFpku.jpg";
-    if (parent !== null) {
-      parent.insertBefore(banner, parent.firstChild);
+  
+    /* FOAMY MOLDEABLE */
+    if (URLactual2 == "/arte-papeleria-merceria-manualidades-masas-plastilina") {
+      const banner = document.createElement("img");
+      banner.src = "https://iili.io/HdVFpku.jpg";
+      if (parent !== null) {
+        parent.firstChild.appendChild(banner);
+      }
     }
-    throw new Error("Error controlado");
-  }
-
-  /* MARCADORES Y RESALTADORES */
-  if (
-    URLactual ==
-    "/listado/arte-papeleria-merceria/papeleria/escolar/escritura/marcadores-marcatextos/"
-  ) {
-    const banner = document.createElement("img");
-    banner.src = "https://iili.io/HdVqVd7.jpg";
-    if (parent !== null) {
-      parent.insertBefore(banner, parent.firstChild);
+  
+    /* MARCADORES Y RESALTADORES */
+    if (
+      URLactual2 ==
+      "/listado/arte-papeleria-merceria/papeleria/escolar/escritura/marcadores-marcatextos/"
+    ) {
+      const banner = document.createElement("img");
+      banner.src = "https://iili.io/HdVqVd7.jpg";
+      if (parent !== null) {
+        parent.firstChild.appendChild(banner);
+      }
     }
-    throw new Error("Error controlado");
-  }
-
-  /* PINTURAS Y ACUARELAS */
-  if (URLactual == "/pintura") {
-    const banner = document.createElement("img");
-    banner.src = "https://iili.io/HdVnazg.jpg";
-    if (parent !== null) {
-      parent.insertBefore(banner, parent.firstChild);
+  
+    /* PINTURAS Y ACUARELAS */
+    if (URLactual2 == "/pintura") {
+      const banner = document.createElement("img");
+      banner.src = "https://iili.io/HdVnazg.jpg";
+      if (parent !== null) {
+        parent.firstChild.appendChild(banner);
+      }
     }
-    throw new Error("Error controlado");
-  }
-
-  /* PAPELES ESPECIALES */
-  if (URLactual == "/papel-hojas") {
-    const banner = document.createElement("img");
-    banner.src = "https://iili.io/HdVTqVn.jpg";
-    if (parent !== null) {
-      parent.insertBefore(banner, parent.firstChild);
+  
+    /* PAPELES ESPECIALES */
+    if (URLactual2 == "/papel-hojas") {
+      const banner = document.createElement("img");
+      banner.src = "https://iili.io/HdVTqVn.jpg";
+      if (parent !== null) {
+        parent.firstChild.appendChild(banner);
+      }
     }
-    throw new Error("Error controlado");
-  }
-
-  /* ACCESORIOS OFICINA */
-  if (URLactual == "/k02") {
-    const banner = document.createElement("img");
-    banner.src = "https://iili.io/HdVABaf.jpg";
-    if (parent !== null) {
-      parent.insertBefore(banner, parent.firstChild);
+  
+    /* ACCESORIOS OFICINA */
+    if (URLactual2 == "/k02") {
+      const banner = document.createElement("img");
+      banner.src = "https://iili.io/HdVABaf.jpg";
+      if (parent !== null) {
+        parent.firstChild.appendChild(banner);
+      }
     }
-    throw new Error("Error controlado");
-  }
-
-  /* PREESCOLAR */
-  if (URLactual == "/k03") {
-    const banner = document.createElement("img");
-    banner.src = "https://iili.io/HoGszEF.jpg";
-    if (parent !== null) {
-      parent.insertBefore(banner, parent.firstChild);
+  
+    /* PREESCOLAR */
+    if (URLactual2 == "/k03") {
+      const banner = document.createElement("img");
+      banner.src = "https://iili.io/HoGszEF.jpg";
+      if (parent !== null) {
+        parent.firstChild.appendChild(banner);
+      }
     }
-    throw new Error("Error controlado");
-  }
-
-  /* ESCOLAR */
-  if (URLactual == "/k04") {
-    const banner = document.createElement("img");
-    banner.src = "https://iili.io/HoGsxB1.jpg";
-    if (parent !== null) {
-      parent.insertBefore(banner, parent.firstChild);
+  
+    /* ESCOLAR */
+    if (URLactual2 == "/k04") {
+      const banner = document.createElement("img");
+      banner.src = "https://iili.io/HoGsxB1.jpg";
+      if (parent !== null) {
+        parent.firstChild.appendChild(banner);
+      }
     }
-    throw new Error("Error controlado");
-  }
-
-  /* PROFESIONAL */
-  if (URLactual == "/k05") {
-    const banner = document.createElement("img");
-    banner.src = "https://iili.io/HoGsAYJ.jpg";
-    if (parent !== null) {
-      parent.insertBefore(banner, parent.firstChild);
+  
+    /* PROFESIONAL */
+    if (URLactual2 == "/k05") {
+      const banner = document.createElement("img");
+      banner.src = "https://iili.io/HoGsAYJ.jpg";
+      if (parent !== null) {
+        parent.firstChild.appendChild(banner);
+      }
     }
-    throw new Error("Error controlado");
-  }
-
-  /* MANUALIDADES */
-  if (URLactual == "/k06") {
-    const banner = document.createElement("img");
-    banner.src = "https://iili.io/HoGsIrg.jpg";
-    if (parent !== null) {
-      parent.insertBefore(banner, parent.firstChild);
+  
+    /* MANUALIDADES */
+    if (URLactual2 == "/k06") {
+      const banner = document.createElement("img");
+      banner.src = "https://iili.io/HoGsIrg.jpg";
+      if (parent !== null) {
+        parent.firstChild.appendChild(banner);
+      }
     }
-    throw new Error("Error controlado");
-  }
-
-  /* TATTOO */
-  if (URLactual == "/tattoo") {
-    const banner = document.createElement("img");
-    banner.src = "https://iili.io/HoGsu2a.jpg";
-    if (parent !== null) {
-      parent.insertBefore(banner, parent.firstChild);
+  
+    /* TATTOO */
+    if (URLactual2 == "/tattoo") {
+      const banner = document.createElement("img");
+      banner.src = "https://iili.io/HoGsu2a.jpg";
+      if (parent !== null) {
+        parent.firstChild.appendChild(banner);
+      }
     }
-    throw new Error("Error controlado");
   }
-}
+  
+  console.log(10)
+},500)

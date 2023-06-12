@@ -784,7 +784,6 @@ input[data-js=attributes-toggle]:checked+.toggle-menu span:nth-child(2) {
 
 .nav-footer-about p {
     margin: 0 !important;
-    order: 1
 }
 
 @media screen and (min-width: 768px) {
@@ -1561,7 +1560,7 @@ a:link {
 
 @media (max-width: 768px) {
     .logo-header {
-        display: none;
+        display: none;;
     }
 }
 
@@ -2492,4 +2491,8 @@ ul .subcategoria-mobile-nivel {
 
 .ubicacion p {
     font-size: 12px;
+}
+
+.ui-item__discount-text{
+    color: #000 !important;
 }

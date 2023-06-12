@@ -5,3 +5,7 @@ flechaProductos.addEventListener('click', function() {
     subMenuProductos.classList.toggle('invisible');
     flechaProductos.classList.toggle('rotar');
 });
+
+
+console.log(9)
+
