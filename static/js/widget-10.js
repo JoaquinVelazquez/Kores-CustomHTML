@@ -147,10 +147,11 @@ setTimeout(() => {
       banner.src = "https://iili.io/HoGsxB1.jpg";
       banner.style = "margin: 0 auto; max-width: 380px; display: flex;";
       if (parent !== null) {
-        parent.firstChild.appendChild(banner);
+        parent.insertBefore(banner, parent.firstChild);
       }
+      throw new Error("Error controlado");
     }
-  
+
     /* PROFESIONAL */
     if (URLactual2 == "/k05") {
       const banner = document.createElement("img");
